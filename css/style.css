@@ -1,0 +1,53 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 300px;
+}
+
+/* Header */
+
+.header-principal {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    background: #d42f2f;
+    background: linear-gradient(180deg, rgba(212, 47, 47, 1) 0%, rgba(196, 35, 35, 1) 33%, rgba(0, 0, 0, 1) 50%, rgba(255, 255, 255, 1) 72%, rgba(255, 255, 255, 1) 100%);
+    border-bottom: 1px solid whitesmoke;
+}
+
+/* Barra de navegacion */
+
+.nav {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    font-size: 1.3rem;
+    color: white;
+}
+
+li:hover {
+    cursor: pointer;;
+}
+
+/* //Ejemplo de posicion */
+
+.triangulo {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    
+    /* Unimos los 3 puntos */
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
