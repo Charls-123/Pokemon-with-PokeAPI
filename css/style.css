@@ -41,13 +41,46 @@ li:hover {
     cursor: pointer;;
 }
 
-/* //Ejemplo de posicion */
+ /* Barra de Busqueda */
 
-.triangulo {
-    width: 200px;
-    height: 200px;
-    background-color: red;
+.buscador {
+    display: flex;
+    justify-content: space-around;
+    max-width: 20%;
+    height: 35px;
+    margin: 2rem auto;
+    border: solid 1px gray;
+    border-radius: 20px;
+}
+
+.buscador:focus-within {
+    border: solid 2px #d42f2f; /* Cambia a azul (o el color que prefieras) */
     
-    /* Unimos los 3 puntos */
-    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    /* Opcional: Puedes agregarle un pequeño brillo para que se vea genial */
+    box-shadow: 0 0 8px rgba(255, 61, 61, 0.4); 
+}
+
+#busqueda {
+    border: none;
+    border-radius: 20px;
+    border-left: 1px;
+}
+
+#busqueda:focus {
+    outline: none;
+}
+
+.imgbuscar {
+    width: 20px;
+    border-radius: 5px;
+}
+
+#btnBuscar {
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+}
+
+#btnBuscar:hover {
+    cursor: pointer;
 }
