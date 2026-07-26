@@ -3,32 +3,34 @@ export class uiPagina {
         const  url = `https://raw.githubusercontent.com/duiker101/pokemon-type-svg-icons/master/icons/${tipoNombre}.svg`;
 
         return `
-            <img
-                src = ${url}
-                alt = '${tipoNombre}'
-                class = 'tipo ${this.obtenerClaseTipos(tipoNombre)}'
-            >                
+            <div class='tipo ${this.obtenerClaseTipos(tipoNombre)}'>
+                <img
+                    src = ${url}
+                    alt = '${tipoNombre}'
+                    class=icon-tipo
+                >                
+            </div>
         `;
     }
 
     obtenerClaseTipos(tipo) {
         const tipos = {
-            'fire': 'bg-fuego',
-            'water': 'bg-agua',
-            'grass': 'bg-planta',
-            'poison': 'bg-veneno',
+            'fire': 'bg-fyre',
+            'water': 'bg-water',
+            'grass': 'bg-grass',
+            'poison': 'bg-poison',
             'normal': 'bg-normal',
-            'flying': 'bg-volador',
-            'ground': 'bg-tierra',
-            'rock': 'bg-roca',
-            'ice': 'bg-hielo',
-            'steel': 'bg-acero',
+            'flying': 'bg-flying',
+            'ground': 'bg-ground',
+            'rock': 'bg-rock',
+            'ice': 'bg-ice',
+            'steel': 'bg-steel',
             'dragon': 'bg-dragon',
-            'fairy': 'bg-hada',
-            'dark': 'bg-siniestro',
-            'psychic': 'bg-psiquico',
-            'electric': 'bg-electrico',
-            'fight': 'bg-lucha',
+            'fairy': 'bg-fairy',
+            'dark': 'bg-dark',
+            'psychic': 'bg-psychic',
+            'electric': 'bg-electric',
+            'fighting': 'bg-fighting',
         }
 
         return tipos[tipo];

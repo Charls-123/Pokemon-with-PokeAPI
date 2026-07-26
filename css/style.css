@@ -87,3 +87,38 @@ li:hover {
 
 
 /* pokemon cards */
+
+.tipos {
+    display: flex;
+    gap: 1rem;
+}
+
+.tipo {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+.icon-tipo {
+    width: 20px;
+}
+
+.bg-electric{ background-color: yellow;}
+.bg-fighting{background-color: rgb(255, 83, 20);}
+.bg-fire{background-color: red;}
+.bg-water{background-color: rgb(28, 135, 222);}
+.bg-grass{background-color: rgb(12, 150, 21);}
+.bg-bug{background-color: rgb(16, 255, 32);}
+.bg-poison{background-color: purple;}
+.bg-normal{background-color: gray;}
+.bg-flying{background-color: rgb(172, 235, 241);}
+.bg-ground{background-color: rgb(208, 131, 43);}
+.bg-rock{background-color: rgb(190, 164, 92);}
+.bg-ice{background-color: rgb(88, 231, 231);}
+.bg-steel{background-color: rgb(105, 141, 172);}
+.bg-dragon{background-color: rgb(13, 10, 148);}
+.bg-fairy{background-color: pink;}
+.bg-dark{background-color: rgb(11, 49, 103);}
+.bg-psychic{background-color: rgb(255, 48, 82);}
