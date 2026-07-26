@@ -6,30 +6,32 @@ export class uiPagina {
             <img
                 src = ${url}
                 alt = '${tipoNombre}'
-                class = 'tipo'
+                class = 'tipo ${this.obtenerClaseTipos(tipoNombre)}'
             >                
         `;
     }
 
     obtenerClaseTipos(tipo) {
         const tipos = {
-            'fuego': 'bg-fuego',
-            'agua': 'bg-agua',
-            'planta': 'bg-planta',
-            'veneno': 'bg-veneno',
+            'fire': 'bg-fuego',
+            'water': 'bg-agua',
+            'grass': 'bg-planta',
+            'poison': 'bg-veneno',
             'normal': 'bg-normal',
-            'volador': 'bg-volador',
-            'tierra': 'bg-tierra',
-            'roca': 'bg-roca',
-            'hielo': 'bg-hielo',
-            'acero': 'bg-acero',
+            'flying': 'bg-volador',
+            'ground': 'bg-tierra',
+            'rock': 'bg-roca',
+            'ice': 'bg-hielo',
+            'steel': 'bg-acero',
             'dragon': 'bg-dragon',
-            'hada': 'bg-hada',
-            'siniestro': 'bg-siniestro',
-            'psiquico': 'bg-psiquico',
-            'electrico': 'bg-electrico',
-            'lucha': 'bg-lucha',
+            'fairy': 'bg-hada',
+            'dark': 'bg-siniestro',
+            'psychic': 'bg-psiquico',
+            'electric': 'bg-electrico',
+            'fight': 'bg-lucha',
         }
+
+        return tipos[tipo];
     }
 
     imprimirPokemon(url) {
