@@ -15,7 +15,7 @@ export class uiPagina {
 
     obtenerClaseTipos(tipo) {
         const tipos = {
-            'fire': 'bg-fyre',
+            'fire': 'bg-fire',
             'water': 'bg-water',
             'grass': 'bg-grass',
             'poison': 'bg-poison',
@@ -36,11 +36,11 @@ export class uiPagina {
         return tipos[tipo];
     }
 
-    imprimirPokemon(url) {
-        const {abilities, name, types, sprites, id} = url;
+    imprimirPokemon(pokemon, habilidades) {
+        const {abilities, name, types, sprites, id} = pokemon;
         
         const contenedorCards = document.querySelector('#pokemones')
-        const urlImagen = url.sprites.other['official-artwork'].front_default;
+        const urlImagen = pokemon.sprites.other['official-artwork'].front_default;
 
         const card = document.createElement('DIV');
 
@@ -65,10 +65,27 @@ export class uiPagina {
         contenedorTipo.innerHTML = `
             ${
                 types.map( tipo => {
-                    return this.obtenerImagenesTipos(tipo.type.name)
+                    return this.obtenerImagenesTipos(tipo.type.name);
                     }).join('')
             }
-        `
+        `;
+
+        const contenedorHabilidades = document.createElement('div');
+        contenedorHabilidades.classList.add('habilidades');
+
+        contenedorHabilidades.innerHTML = `
+            ${
+                habilidades.map( hab => {
+                    // Extraes la descripción y el nombre
+                        const nombre = hab.name;
+                        const descripcion = hab.flavor_text_entries[0].flavor_text;
+                        
+                        return `
+                            <p><strong>${nombre}</strong> <br>${descripcion}</br></p>
+                        `;
+                }).join('')
+            }
+        `;
 
         noNombre.appendChild(noPokedex)
         noNombre.appendChild(nombre)
@@ -76,6 +93,7 @@ export class uiPagina {
         card.appendChild(noNombre);
         card.appendChild(imgPoke);
         card.appendChild(contenedorTipo);
+        card.appendChild(contenedorHabilidades);
 
 
         contenedorCards.appendChild(card)
