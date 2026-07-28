@@ -43,20 +43,33 @@ export class uiPagina {
         const urlImagen = pokemon.sprites.other['official-artwork'].front_default;
 
         const card = document.createElement('DIV');
+        card.classList.add('tarjeta-pokemon');
 
 
         const noNombre = document.createElement('header');
         noNombre.classList.add('header-card')
+        
+        const contenedorId = document.createElement('div');
+        contenedorId.classList.add('contenedor-id')
 
         const noPokedex = document.createElement('h2');
         noPokedex.textContent = id;
+
+        contenedorId.appendChild(noPokedex);
 
         const nombre = document.createElement('h2');
         nombre.textContent = name;
 
         
+        //contenedor imagen
+
+        const contenedorImg = document.createElement('div');
+        contenedorImg.classList.add('contenedor-img')
+
         const imgPoke = document.createElement('img');
         imgPoke.src = urlImagen;
+
+        contenedorImg.appendChild(imgPoke);
 
 
         const contenedorTipo = document.createElement('div');
@@ -87,11 +100,11 @@ export class uiPagina {
             }
         `;
 
-        noNombre.appendChild(noPokedex)
+        noNombre.appendChild(contenedorId)
         noNombre.appendChild(nombre)
 
         card.appendChild(noNombre);
-        card.appendChild(imgPoke);
+        card.appendChild(contenedorImg);
         card.appendChild(contenedorTipo);
         card.appendChild(contenedorHabilidades);
 

@@ -1,3 +1,15 @@
+:root {
+    
+    --bordes: #b2acac;
+
+    --titulosPrincipales: "Press Start 2P", system-ui;
+    --titulosAlternativos: "Luckiest Guy", cursive;
+    --menus: "Montserrat", sans-serif;
+    --nombreCards: "Oswald", sans-serif;
+    --stats: "Roboto Condensed", sans-serif;
+    --textosGenerales: "Google Sans Flex", sans-serif;
+}
+
 
 body {
     margin: 0;
@@ -87,6 +99,46 @@ li:hover {
 
 
 /* pokemon cards */
+#pokemones {
+    display: flex;
+    justify-content: center;
+}
+
+.tarjeta-pokemon {
+    border: 7px solid gray;
+    border-radius: 10px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-card {
+    width: 100%;
+    font-family: var(--nombreCards);
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor-id {
+    background-color: gray;
+    width: 35px;
+}
+
+.contenedor-img {
+    display: flex;
+    justify-content: center;
+    border: 5px solid var(--bordes);
+    border-radius: 5px;
+    width: 350px;
+    box-shadow: inset 0 0 0 2px #bcb6b6;
+    
+    background-image: url("../assets/fondos/Central_Energia.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
 
 .tipos {
     display: flex;
